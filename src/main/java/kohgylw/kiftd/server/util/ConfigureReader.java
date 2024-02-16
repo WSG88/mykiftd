@@ -1,20 +1,18 @@
 package kohgylw.kiftd.server.util;
 
-import java.util.*;
-
-import kohgylw.kiftd.printer.*;
-import kohgylw.kiftd.server.enumeration.*;
+import kohgylw.kiftd.printer.Printer;
+import kohgylw.kiftd.server.enumeration.AccountAuth;
+import kohgylw.kiftd.server.enumeration.LogLevel;
+import kohgylw.kiftd.server.enumeration.VCLevel;
 import kohgylw.kiftd.server.model.Folder;
-import kohgylw.kiftd.server.pojo.*;
+import kohgylw.kiftd.server.pojo.ExtendStores;
+import kohgylw.kiftd.server.pojo.ServerSetting;
+
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchEvent;
-import java.nio.file.WatchKey;
-import java.nio.file.WatchService;
+import java.nio.file.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.*;
 
 /**
  * 
@@ -65,9 +63,17 @@ public class ConfigureReader {
 	private final String DEFAULT_FILE_SYSTEM_PATH;
 	private final String DEFAULT_FILE_SYSTEM_PATH_SETTING = "DEFAULT";
 	private final String DEFAULT_ACCOUNT_ID = "admin";
-	private final String DEFAULT_ACCOUNT_PWD = "000000";
-	private final String DEFAULT_ACCOUNT_AUTH = "cudrm";
-	private final String DEFAULT_AUTH_OVERALL = "l";
+	private final String DEFAULT_ACCOUNT_PWD = "880308";
+	/**
+	 * ◆ “c”：创建文件夹
+	 * ◆ “u”：上传文件
+	 * ◆ “d”：删除文件或文件夹
+	 * ◆ “r”：重命名文件或编辑文件夹
+	 * ◆ “l”：下载文件
+	 * ◆ “m”:移动/复制文件或文件夹（剪切/复制-粘贴）
+	 */
+	private final String DEFAULT_ACCOUNT_AUTH = "u";
+	private final String DEFAULT_AUTH_OVERALL = "u";
 	private final String DEFAULT_PASSWORD_CHANGE_SETTING = "N";
 	private final String DEFAULT_FILE_CHAIN_SETTING = "CLOSE";
 	public static final int INVALID_PORT = 1;// 端口无效
