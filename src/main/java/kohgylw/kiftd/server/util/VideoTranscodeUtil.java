@@ -1,21 +1,19 @@
 package kohgylw.kiftd.server.util;
 
+import kohgylw.kiftd.server.mapper.NodeMapper;
+import kohgylw.kiftd.server.model.Node;
+import kohgylw.kiftd.server.pojo.VideoTranscodeThread;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.stereotype.Component;
+import ws.schild.jave.encode.AudioAttributes;
+import ws.schild.jave.encode.EncodingAttributes;
+import ws.schild.jave.encode.VideoAttributes;
+
+import javax.annotation.Resource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.stereotype.Component;
-
-import kohgylw.kiftd.server.mapper.NodeMapper;
-import kohgylw.kiftd.server.model.Node;
-import kohgylw.kiftd.server.pojo.VideoTranscodeThread;
-import ws.schild.jave.encode.AudioAttributes;
-import ws.schild.jave.encode.EncodingAttributes;
-import ws.schild.jave.encode.VideoAttributes;
 
 /**
  * 
@@ -89,16 +87,17 @@ public class VideoTranscodeUtil {
 			}
 			String suffix = n.getFileName().substring(n.getFileName().lastIndexOf(".") + 1).toLowerCase();
 			switch (suffix) {
-			case "mp4":
-			case "webm":
-			case "mov":
-			case "avi":
-			case "wmv":
-			case "mkv":
-			case "flv":
-				break;
-			default:
-				throw new IllegalArgumentException();
+				case "mp4":
+				case "m4v":
+				case "webm":
+				case "mov":
+				case "avi":
+				case "wmv":
+				case "mkv":
+				case "flv":
+					break;
+				default:
+					throw new IllegalArgumentException();
 			}
 			videoTranscodeThreads.put(fId, new VideoTranscodeThread(f, ea, kfl));
 			return "0.0";

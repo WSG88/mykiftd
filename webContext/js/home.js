@@ -1065,6 +1065,7 @@ function createFileRow(fi, aL, aD, aR, aO) {
 		var suffix = getSuffix(fi.fileName);
 		switch (suffix) {
 			case "mp4":
+			case "m4v":
 				fileRow = fileRow
 					+ "<button onclick='playVideo("
 					+ '"'
@@ -1072,6 +1073,7 @@ function createFileRow(fi, aL, aD, aR, aO) {
 					+ '"'
 					+ ")' class='btn btn-link btn-xs'><span class='glyphicon glyphicon-play'></span> 播放</button>";
 				break;
+			case "m4v":
 			case "webm":
 			case "mov":
 			case "avi":
