@@ -7,7 +7,7 @@ package kohgylw.kiftd.server.pojo;
  * 该类用于封装文件夹内容的统计信息，可在JSON化后传至前端。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FolderCountResult {

@@ -32,7 +32,7 @@ import kohgylw.kiftd.ui.util.PathsTable;
  * 该窗口用于提供用户管理文件系统路径的界面功能，包括修改主文件系统路径和新增、删除、修改扩展存储区的功能。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FileSystemPathViewer extends KiftdDynamicWindow {
@@ -269,7 +269,7 @@ public class FileSystemPathViewer extends KiftdDynamicWindow {
 	 * 当一个文件窗口已经打开时，再次调用此方法仅会显示唯一的文件窗口（不会再打开一个新的文件窗口）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void show() {
 		disableAllButtons();
@@ -289,7 +289,7 @@ public class FileSystemPathViewer extends KiftdDynamicWindow {
 	 * 该方法能够获得文件管理器的唯一实例，在第一次打开时会进行较耗时的资源加载工作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.ui.module.FSViewer 该视图的唯一实例，程序中只会存在一个该窗口。
 	 */
 	public static FileSystemPathViewer getInstance() {

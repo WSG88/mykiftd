@@ -27,7 +27,7 @@ import kohgylw.kiftd.util.file_system_manager.pojo.FolderView;
  * 该启动器将以命令模式启动kiftd，请执行静态build()方法开启界面并初始化kiftd服务器引擎。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class ConsoleRunner {
@@ -55,7 +55,7 @@ public class ConsoleRunner {
 	 * 启动命令模式操作并初始化服务器引擎，该方法将返回本启动器的唯一实例。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param args java.lang.String[] 启动参数
 	 * @return kohgylw.kiftd.mc.ConsoleRunner 本启动器唯一实例
 	 */
@@ -97,7 +97,7 @@ public class ConsoleRunner {
 	}
 
 	private void startKiftdByConsole() {
-		Printer.instance.print(" 青阳网络文件系统-kiftd 控制台模式[Console model]");
+		Printer.instance.print(" 天一网络文件系统 控制台模式[Console model]");
 		Printer.instance.print("Character encoding with UTF-8");
 		final Thread t = new Thread(() -> {
 			Printer.instance.print("正在初始化服务器...");

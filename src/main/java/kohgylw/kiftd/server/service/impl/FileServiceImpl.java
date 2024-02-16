@@ -30,7 +30,7 @@ import com.google.gson.reflect.TypeToken;
  * 该类负责对文件相关的服务进行实现操作，例如下载和上传等，各方法功能详见接口定义。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  * @see kohgylw.kiftd.server.service.FileService
  */
@@ -1212,7 +1212,7 @@ public class FileServiceImpl extends RangeFileStreamWriter implements FileServic
 	 * 示例3：输入"aaa//bbb/ccc.c"，返回["aaa","bbb"]。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path java.lang.String 原路径字符串
 	 * @return java.lang.String[] 解析出的目录层级
 	 */
@@ -1237,7 +1237,7 @@ public class FileServiceImpl extends RangeFileStreamWriter implements FileServic
 	 * 从相对路径中获得文件名，若解析失败则返回null。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param java.lang.String 需要解析的相对路径
 	 * @return java.lang.String 文件名
 	 */

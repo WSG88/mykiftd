@@ -33,7 +33,7 @@ public class KiftdFFMPEGLocator implements ProcessLocator {
 	 * 在实例化过程中，将根据操作系统来判断使用哪一种ffmpeg引擎可执行文件来进行引用，并将其拷贝到临时目录中以便转码使用。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public KiftdFFMPEGLocator() {
 		// 实例化过程，初始化一些系统相关的变量

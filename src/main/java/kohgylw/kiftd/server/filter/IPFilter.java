@@ -23,7 +23,7 @@ import kohgylw.kiftd.server.util.IpAddrGetter;
  * 
  * <h2>阻止特定IP访问过滤器</h2>
  * <p>该过滤器用于阻止特定IP进行访问，从而保护用户资源。</p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @WebFilter

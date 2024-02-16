@@ -23,7 +23,7 @@ import java.sql.DriverManager;
  * 该工具负责读取并解析配置文件，并将结果随时提供给kiftd服务器业务逻辑以完成相应功能（例如用户认证、权限判定、配置启动端口等）。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class ConfigureReader {
@@ -58,7 +58,7 @@ public class ConfigureReader {
 	private final String ACCOUNT_PROPERTIES_FILE = "account.properties";
 	private final String SERVER_PROPERTIES_FILE = "server.properties";
 	private final int DEFAULT_BUFFER_SIZE = 1048576;
-	private final int DEFAULT_PORT = 8080;
+	private final int DEFAULT_PORT = 8880;
 	private final String DEFAULT_LOG_LEVEL = "E";
 	private final String DEFAULT_VC_LEVEL = "STANDARD";
 	private final String DEFAULT_MUST_LOGIN = "O";
@@ -192,7 +192,7 @@ public class ConfigureReader {
 	 * 该方法用于判断账户是否具备执行指定操作的权限，若具备则返回true，否则返回false。在每一个用户操作执行前，均应先使用本方法进行判别。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account java.lang.String 账户的ID，如果是匿名访问可传入null
 	 * @param auth    kohgylw.kiftd.server.enumeration.AccountAuth
 	 *                要判断的操作类型，使用枚举类中定义的各种操作作为参数传入
@@ -361,7 +361,7 @@ public class ConfigureReader {
 	 * 得到全部扩展存储区列表，以便进行文件块的存取操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.util.List<kohgylw.kiftd.server.pojo.ExtendStores> 所有扩展存储区对象的列表
 	 */
 	public List<ExtendStores> getExtendStores() {
@@ -428,7 +428,7 @@ public class ConfigureReader {
 	 * 返回设置的验证码等级枚举类（kohgylw.kiftd.server.enumeration.VCLevel），包括：关闭（CLOSE）、简单（Simplified）、标准（Standard）
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.server.enumeration.VCLevel 验证码等级
 	 */
 	public VCLevel getVCLevel() {
@@ -492,7 +492,7 @@ public class ConfigureReader {
 	 * 在服务器启动前再次检查各设置，实现某些设置的“即插即用”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void reTestServerPropertiesAndEffect() {
 		this.propertiesStatus = testServerPropertiesAndEffect();
@@ -565,7 +565,7 @@ public class ConfigureReader {
 	 * 该方法用于对配置文件进行验证并将正确的值赋予相应的属性，必须在构造器中执行本方法。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return int 验证结果代码
 	 */
 	private int testServerPropertiesAndEffect() {
@@ -583,8 +583,8 @@ public class ConfigureReader {
 		}
 		final String ports = this.serverp.getProperty("port");
 		if (ports == null) {
-			Printer.instance.print("警告：未找到端口配置，将采用默认值（8080）。");
-			this.port = 8080;
+			Printer.instance.print("警告：未找到端口配置，将采用默认值（8880）。");
+			this.port = 8880;
 		} else {
 			try {
 				this.port = Integer.parseInt(ports);
@@ -943,7 +943,7 @@ public class ConfigureReader {
 	 * 用于检查是否使用自定义的外部MySQL数据库。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 是否使用了外部MySQL数据库
 	 */
 	public boolean useMySQL() {
@@ -958,7 +958,7 @@ public class ConfigureReader {
 	 * 如果定义了MySQL数据库位置，则使用用户自定义URL，该数据库必须使用UTF-8编码集。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return String 用于数据源或jdbc进行连接的文件节点数据库URL地址
 	 */
 	public String getFileNodePathURL() {
@@ -972,7 +972,7 @@ public class ConfigureReader {
 	 * 如设定使用MySQL，则使用外置MySQL-connector 8.0，否则使用默认内置数据库驱动。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang,String 数据库驱动类型
 	 */
 	public String getFileNodePathDriver() {
@@ -986,7 +986,7 @@ public class ConfigureReader {
 	 * 如设定使用MySQL，则使用用户自定义用户名，否则使用默认内置数据库用户名。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang,String 数据库用户名
 	 */
 	public String getFileNodePathUserName() {
@@ -1000,7 +1000,7 @@ public class ConfigureReader {
 	 * 如设定使用MySQL，则使用用户自定义密码，否则使用默认内置数据库密码。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang,String 数据库密码
 	 */
 	public String getFileNodePathPassWord() {
@@ -1017,7 +1017,7 @@ public class ConfigureReader {
 	 * 返回true，其余情况均返回false。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f       Folder 要访问的文件夹对象
 	 * @param account String 要访问的账户
 	 * @return boolean true允许访问，false不允许访问
@@ -1075,7 +1075,7 @@ public class ConfigureReader {
 	 * 该方法负责启动对账户配置文件account.properties的修改监听，并自动载入最新配置，设计在应用运行时执行，应用关闭自动结束。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void startAccountRealTimeUpdateListener() {
 		if (accountPropertiesUpdateDaemonThread == null) {
@@ -1123,7 +1123,7 @@ public class ConfigureReader {
 	 * 该方法将返回用户是否开启了https的设置项。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 是否开启
 	 */
 	public boolean openHttps() {
@@ -1153,7 +1153,7 @@ public class ConfigureReader {
 	 * 该方法用于判断指定用户上传的文件是否超过规定值。使用时需传入用户账户名字符串，返回该用户的最大上传限制。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account java.lang.String 需要检查的账户名
 	 * @return long 以byte为单位的最大阈值，若返回0则设置错误，若小于0则不限制。
 	 */
@@ -1186,7 +1186,7 @@ public class ConfigureReader {
 	 * 当不写存储单位时，则以“B”（byte）为单位进行转换。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in java.lang.String 要转换的字符串内容，格式应为“{数值}{存储单位（可选）}”，例如“1024KB”或“10mb”。
 	 * @return long 以Byte为单位计算的体积值，若为0则代表设置错误，若为负数则代表无限制
 	 */
@@ -1236,7 +1236,7 @@ public class ConfigureReader {
 	 * 该方法用于限制用户的最大下载速度。使用时需传入用户账户名字符串，返回该用户的最大下载速度限制。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account java.lang.String 需要获取限制的账户名
 	 * @return long 最大下载速度限制，以B/s为单位
 	 */
@@ -1267,7 +1267,7 @@ public class ConfigureReader {
 	 * 当不写速率单位时，则以“KB/s”为单位进行转换。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in java.lang.String 要转换的字符串内容，格式应为“{数值}{速率单位（可选）}”，例如“1024”或“10 mb”。
 	 * @return long 以B/s为单位计算的下载速度，若为0则代表设置错误，若为负数则代表无限制
 	 */
@@ -1353,7 +1353,7 @@ public class ConfigureReader {
 	 * 判断是否允许用户修改密码，若允许则开启用户修改密码功能。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 允许则返回true，否则返回false
 	 */
 	public boolean isAllowChangePassword() {
@@ -1367,7 +1367,7 @@ public class ConfigureReader {
 	 * 判断是否开启永久资源链接，若开启则提供每个可下载文件的外部链接。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 开启则返回true，否则返回false
 	 */
 	public boolean isOpenFileChain() {
@@ -1381,7 +1381,7 @@ public class ConfigureReader {
 	 * 判断是否允许注册新账户，若允许则访问者可以自由注册新的账户。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 允许则返回true，否则返回false
 	 */
 	public boolean isAllowSignUp() {
@@ -1395,7 +1395,7 @@ public class ConfigureReader {
 	 * 该操作将修改已存在的账户的密码并写入账户配置文件中生效，该操作仅进行写入而不对新密码进行格式检查。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account     java.lang.String 账户ID，该账户必须已经存在，否则会导致修改失败
 	 * @param newPassword java.lang.String 新密码，必须不为null，否则会导致修改失败
 	 * @return boolean 操作是否成功，成功则返回true
@@ -1425,7 +1425,7 @@ public class ConfigureReader {
 	 * 判断传入的IP是否允许访问。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param ipAddr java.lang.String 要判断的IP地址
 	 * @return boolean 该地址是否被禁用，被禁用则返回true
 	 */
@@ -1440,7 +1440,7 @@ public class ConfigureReader {
 	 * 该方法用于判断是否启用IP访问规则，若未启用则无需进行IP过滤。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 启用则返回true，否则返回false
 	 */
 	public boolean enableIPRule() {
@@ -1489,7 +1489,7 @@ public class ConfigureReader {
 	 * 该方法用于在账户配置文件中写入一个新账户设置并设置新账户的权限。注意：该方法不对写入的账户名和密码进行格式检查。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param newAccount  java.lang.String 要写入的新账户名
 	 * @param newPassword java.lang.String 新账户的密码
 	 * @return boolean 是否写入成功。仅当账户名不存在且写入成功时返回true，否则返回false
@@ -1526,7 +1526,7 @@ public class ConfigureReader {
 	 * 该方法用于获得系统允许创建的扩展存储区最大数目。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return int 扩展存储区最大数目
 	 */
 	public int getMaxExtendstoresNum() {
@@ -1540,7 +1540,7 @@ public class ConfigureReader {
 	 * 该功能用于返回是否禁用了IP地址的XFF解析功能。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 启用返回true，否则返回false
 	 */
 	public boolean isIpXFFAnalysis() {
@@ -1554,7 +1554,7 @@ public class ConfigureReader {
 	 * 该方法用于判断用户是否启用视频播放的在线解码功能。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 启用则返回true，否则返回false
 	 */
 	public boolean isEnableFFMPEG() {
@@ -1568,7 +1568,7 @@ public class ConfigureReader {
 	 * 该方法用于判断用户是否启用“打包下载”功能。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 启用则返回true，否则返回false
 	 */
 	public boolean isEnableDownloadByZip() {
@@ -1582,7 +1582,7 @@ public class ConfigureReader {
 	 * 判断用户是否启用了WebDAV功能。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return boolean 启用则返回true，否则返回false
 	 */
 	public boolean isEnableWebDAV() {
@@ -1596,7 +1596,7 @@ public class ConfigureReader {
 	 * 该方法返回删除留档路径（绝对路径），用以将删除的文件归档至该文件夹内。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang.String 归档文件夹的绝对路径。如果未启用此功能则返回null
 	 */
 	public String getRecycleBinPath() {
@@ -1611,7 +1611,7 @@ public class ConfigureReader {
 	 * </p>
 	 * 
 	 * @param account 要检查的账户名，例如“admin”。
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @version 1.0
 	 * @return boolean 该账户若具备超级权限则返回true，否则返回false。若账户名为null也返回false。
 	 *
@@ -1633,7 +1633,7 @@ public class ConfigureReader {
 	 * 该项目由账户配置文件中的“import.account”项设置，例如“import.account=admin”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @version 1.0
 	 * @return String 账户配置文件中设置的导入账户名，若无此设置或此项设置的值为空则返回默认值“SYS_IN”。
 	 *

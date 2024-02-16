@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * 注：参考Tomcat内置MIME type映射表。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -26,7 +26,7 @@ public class ContentTypeMap {
 	 * 由文件的后缀名得到相应的ContentType以便浏览器识别该资源。该方法将返回ContentType类型字符串，型如“application/octet-stream”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param suffix
 	 *            java.lang.String 资源的后缀名，必须以“.”开头，例如“.jpg”
 	 * @return java.lang.String

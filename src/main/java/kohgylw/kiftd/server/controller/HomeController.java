@@ -16,7 +16,7 @@ import javax.servlet.http.*;
  * 该控制器用于负责处理kiftd主页（home.html）的所有请求，具体过程请见各个方法注释。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Controller
@@ -181,7 +181,7 @@ public class HomeController {
 	 * 该方法用于处理预览图片请求。配合Viewer.js插件，返回指定格式的JSON数据。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request HttpServletRequest 请求对象
 	 * @return String 预览图片的JSON信息
 	 */
@@ -198,7 +198,7 @@ public class HomeController {
 	 * 该方法用于预览较大图片时获取其压缩版本以加快预览速度，该请求会根据预览目标的大小自动决定压缩等级。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request  HttpServletRequest 请求对象，其中应包含fileId指定预览图片的文件块ID。
 	 * @param response HttpServletResponse 响应对象，用于写出压缩后的数据流。
 	 */
@@ -244,7 +244,7 @@ public class HomeController {
 	 * 该逻辑用于在执行移动或复制前确认目标文件夹是否合法以及是否会产生文件名冲突。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String 判断结果，详情请见具体实现
 	 */
@@ -261,7 +261,7 @@ public class HomeController {
 	 * 该逻辑用于正式执行移动或复制操作，在调用之前应先执行判断操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String 执行结果，详情请见具体实现
 	 */
@@ -278,7 +278,7 @@ public class HomeController {
 	 * 该逻辑用于进行全局搜索，将会迭代搜索目标文件夹及其全部子文件夹以查找符合关键字的结果，并返回单独的搜索结果视图。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String 搜索结果，详情请见具体实现
 	 */
@@ -295,7 +295,7 @@ public class HomeController {
 	 * 该机制旨在防止某些长耗时操作可能导致Session失效的问题（例如上传、视频播放等），方便用户持续操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return String “pong”或“”
 	 */
 	@RequestMapping(value = { "/ping.ajax" }, produces = { CHARSET_BY_AJAX })

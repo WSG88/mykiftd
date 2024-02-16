@@ -28,7 +28,7 @@ import org.springframework.util.unit.DataSize;
  * 该Spring配置类主要负责配置kiftd网页服务器的基本处理行为，并在IOC容器中生成所需的工具实例。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @AutoConfiguration

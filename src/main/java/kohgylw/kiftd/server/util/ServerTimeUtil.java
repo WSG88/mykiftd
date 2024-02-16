@@ -19,7 +19,7 @@ import java.time.temporal.TemporalQueries;
  * 该工具提供获取服务器时间等与时间相关的操作方法，全部为静态的，本身无需实例化。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class ServerTimeUtil {
@@ -58,7 +58,7 @@ public class ServerTimeUtil {
 	 * 该方法用于生成符合HTTP规范的Last-Modified格式时间截，用于判定资源的最后修改日期。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param block java.io.File 要生成的文件块对象，应该是文件，但也支持文件夹，或者null
 	 * @return java.lang.String 记录最后修改日期的时间截，格式类似于“Wed, 29 Apr 2020 08:18:43
 	 *         GMT”，若传入文件不存在或为null，则返回当前时间
@@ -83,7 +83,7 @@ public class ServerTimeUtil {
 	 * 该时间从1970-01-01T00:00:00Z开始计数。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param date 要转化的日期字符串（精确到日），该字符串应由本类中的String accurateToDay()方法生成。
 	 * @return long 时间，以毫秒为单位，从1970-01-01T00:00:00Z开始计数。如果无法转化（例如传入“--”），则返回0。
 	 */

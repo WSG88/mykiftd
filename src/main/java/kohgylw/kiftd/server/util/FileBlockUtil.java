@@ -29,7 +29,7 @@ import org.zeroturnaround.zip.*;
  * 该工具内包含了对文件系统中文件块的所有操作，使用IOC容器进行管理。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.1
  */
 @Component
@@ -52,7 +52,7 @@ public class FileBlockUtil {
 	 * 详细说明
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @version 1.0
 	 * @return void
 	 *
@@ -89,7 +89,7 @@ public class FileBlockUtil {
 	 * （存放于主文件系统中）或“{存储区编号}_{UUID}.block”（存放在指定编号的扩展存储区中）的形式。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f MultipartFile 上传文件对象
 	 * @return java.io.File 生成的文件块，如果保存失败则返回null
 	 */
@@ -156,7 +156,7 @@ public class FileBlockUtil {
 	 * （存放于主文件系统中）或“{存储区编号}_{UUID}.block”（存放在指定编号的扩展存储区中）的形式。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f 要存入的文件对象
 	 * @return java.io.File 生成的文件块，如果保存失败则返回null
 	 */
@@ -222,7 +222,7 @@ public class FileBlockUtil {
 	 * 该方法用于获取所有扩展存储区的列表，并按照剩余容量从小到大排序。如果没有扩展存储区，则返回一个长度为0的列表。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.util.List&lt;ExtendStores&rt; 排序好的扩展存储区列表。
 	 */
 	private List<ExtendStores> getExtendStoresBySort() {
@@ -281,7 +281,7 @@ public class FileBlockUtil {
 	 * 该方法用于将上传文件的体积转换为以B为单位的字符串标识，以便存入文件系统。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param size 文件的体积，以Byte为单位，例如“1024”
 	 * @return java.lang.String 以B为单位的字符串标识，例如“1024”
 	 */
@@ -297,7 +297,7 @@ public class FileBlockUtil {
 	 * 则进行删除操作，否则直接返回true。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f kohgylw.kiftd.server.model.Node 要删除的文件节点对象
 	 * @return boolean 删除结果，true为成功，否则返回false。若传入节点为null，也会返回false
 	 */
@@ -325,7 +325,7 @@ public class FileBlockUtil {
 	 * 该方法将清理指定节点的文件块，如果开启了“删除留档”功能，则会在清理的同时尝试留档。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param n 要清理文件块的节点
 	 * @return 清理或留档结果。清理或留档成功则返回true，否则返回false。
 	 */
@@ -417,7 +417,7 @@ public class FileBlockUtil {
 	 * 根据传入的文件节点对象，得到其在文件系统中保存的对应文件块。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f kohgylw.kiftd.server.model.Node 要获得的文件节点对象
 	 * @return java.io.File 对应的文件块抽象路径，获取失败则返回null
 	 */
@@ -451,7 +451,7 @@ public class FileBlockUtil {
 	 * 将文件系统中不可用的文件块移除，以便保持文件系统的整洁。该操作应在服务器启动或出现问题时执行。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void checkFileBlocks() {
 		Thread checkThread = new Thread(() -> {
@@ -514,7 +514,7 @@ public class FileBlockUtil {
 	 * 该功能用于创建ZIP压缩文件，线程阻塞。如果压缩目标中存在同名情况，则使用“{文件名} (n).{后缀}”或“{文件夹名} n”的形式重命名。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param idList  java.util.List<String> 要压缩的文件节点目标ID列表
 	 * @param fidList java.util.List<String> 要压缩的文件夹目标ID列表，迭代压缩
 	 * @param account java.lang.String 用户ID，用于判断压缩文件夹是否有效
@@ -662,7 +662,7 @@ public class FileBlockUtil {
 	 * 该方法用于生产指定文件块的ETag标识，从而方便前端控制缓存。生成规则为：{文件最后修改时间计数}_{文件路径对应的Hash码}。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param block java.io.File 需要生成的文件块对象，应为文件，但也支持文件夹，或者是null
 	 * @return java.lang.String 生成的ETag值。当传入的block是null或其不存在时，返回空字符串
 	 */
@@ -686,7 +686,7 @@ public class FileBlockUtil {
 	 * 该方法将尝试生成一个新的文件节点并存入文件系统数据库，并确保该文件节点再插入后不会与已有节点产生冲突。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileName         java.lang.String 文件名称
 	 * @param account          java.lang.String 创建者账户，若传入null则按匿名创建者处理
 	 * @param filePath         java.lang.String 文件节点对应的文件块索引
@@ -738,7 +738,7 @@ public class FileBlockUtil {
 	 * 该方法用于检查传入节点是否存在冲突问题，一般在新节点插入后执行，若存在冲突会立即删除此节点，最后会返回检查结果。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param n kohgylw.kiftd.server.model.Node 待检查的节点
 	 * @return boolean 通过检查则返回true，否则返回false并删除此节点
 	 */
@@ -765,7 +765,7 @@ public class FileBlockUtil {
 	 * 该方法用于获取指定节点当前的完整逻辑路径，型如“/ROOT/doc/test.txt”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param n kohgylw.kiftd.server.model.Node 要获取路径的节点
 	 * @return java.lang.String 指定节点的逻辑路径，包含其完整的上级文件夹路径和自身的文件名，各级之间以“/”分割。
 	 */

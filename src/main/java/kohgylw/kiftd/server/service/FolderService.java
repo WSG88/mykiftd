@@ -21,7 +21,7 @@ public interface FolderService {
 	 * 若创建成功，则可从newName中获取这个新建的文件夹名称，并在上传文件夹时使用该名称作为newFolderName属性的值。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request 请求对象
 	 * @return String 返回的结果json对象
 	 */
@@ -35,7 +35,7 @@ public interface FolderService {
 	 * </p>
 	 * 
 	 * @param request 请求对象
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @version 1.0
 	 * @return String 如果该请求不合法则返回“ERROR”，如果合法则返回json格式的统计信息
 	 *

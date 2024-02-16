@@ -28,7 +28,7 @@ import kohgylw.kiftd.printer.Printer;
  * 详细功能
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -62,7 +62,7 @@ public class NoticeUtil {
 	 * 同时计算原文件的md5值以便通过该对象的md5字段获取。如已生成旧的“notice.html”文件， 则执行该方法将会覆盖它。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void loadNotice() {
 		File noticeMD = new File(ConfigureReader.instance().getPath(), NOTICE_FILE_NAME);
@@ -106,7 +106,7 @@ public class NoticeUtil {
 	 * 该方法将返回公告的md5标识，从而帮助前端判定是否需要显示公告。如果没有公告，那么该方法会返回null。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang.String md5字符串或null。
 	 */
 	public String getMd5() {

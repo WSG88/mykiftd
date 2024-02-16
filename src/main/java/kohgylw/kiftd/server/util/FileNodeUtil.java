@@ -21,7 +21,7 @@ import kohgylw.kiftd.server.model.Node;
  * 该类无需生成实例，全部方法均为静态的。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FileNodeUtil {
@@ -44,7 +44,7 @@ public class FileNodeUtil {
 	 * 该方法将检查数据库并建立初始的文件节点表及相关索引，应在使用文件系统前先执行该操作。 仅在该操作执行后，本类提供的链接对象才会创建并可以使用。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public static void initNodeTableToDataBase() {
 		Printer.instance.print("初始化文件节点...");
@@ -121,7 +121,7 @@ public class FileNodeUtil {
 	 * 在执行initNodeTableToDataBase方法后，可通过本方法获取文件节点的数据库链接以便继续操作，否则返回null。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.sql.Connection 文件节点数据库的链接，除非程序关闭，否则该链接不应关闭。
 	 */
 	public static Connection getNodeDBConnection() {
@@ -137,7 +137,7 @@ public class FileNodeUtil {
 	 * (1).txt” 则返回“test1 (2).txt”，以此类推。当文件列表中不含同名文件时，返回原始文件名。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param originalName java.lang.String 原始文件名
 	 * @param nodes        java.util.List Node 要检查的文件节点列表
 	 * @return java.lang.String 新文件名
@@ -166,7 +166,7 @@ public class FileNodeUtil {
 	 * 功能与得到新文件名类似，当文件夹列表中存在“doc”文件夹时，传入“doc”则返回“doc 2”，以此类推。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param originalName java.lang.String 原始文件夹名
 	 * @param folders      java.util.List Folder 要检查的文件夹列表
 	 * @return java.lang.String 新文件夹名
@@ -190,7 +190,7 @@ public class FileNodeUtil {
 	 * 功能与得到新文件名类似，当文件夹列表中存在“doc”文件夹时，传入“doc”则返回“doc 2”，以此类推。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param folder       kohgylw.kiftd.server.model.Folder 原始文件夹
 	 * @param parentfolder java.io.File 要检查的文件夹
 	 * @return java.lang.String 新文件夹名
@@ -216,7 +216,7 @@ public class FileNodeUtil {
 	 * (1).txt” 则返回“test1 (2).txt”，以此类推。当文件列表中不含同名文件时，返回原始文件名。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param n      kohgylw.kiftd.server.model.Node 要重命名的文件节点
 	 * @param folder java.io.File 要检查的本地文件夹
 	 * @return java.lang.String 新文件名

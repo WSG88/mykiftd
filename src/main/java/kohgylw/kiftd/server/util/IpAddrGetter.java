@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * 
  * <h2>请求IP地址解析工具</h2>
  * <p>该工具包含了public String getIpAddr(HttpServletRequest request)方法用于解析某次请求的来源IP地址。</p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -25,7 +25,7 @@ public class IpAddrGetter {
 	 * 该方法用于从请求对象中获得此请求的来源IP地址，支持反向代理。该地址将以字符串形式返回，例如“127.0.0.1”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String 请求来源IP地址 
 	 */

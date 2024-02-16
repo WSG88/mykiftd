@@ -153,7 +153,7 @@ public class ResourceServiceImpl implements ResourceService {
 	 * 该方法用于回传某个文件资源，支持断点续传。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param resource    java.io.File 要发送的文件资源
 	 * @param fname       java.lang.String 要传递给客户端的文件名，会加入到响应头中
 	 * @param contentType java.lang.String 返回资源的CONTENT_TYPE标识名，例如“text/html”

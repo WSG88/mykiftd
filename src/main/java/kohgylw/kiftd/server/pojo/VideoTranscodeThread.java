@@ -22,7 +22,7 @@ import ws.schild.jave.progress.EncoderProgressListener;
  * 其中存放了视频的转码信息。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class VideoTranscodeThread {
@@ -77,7 +77,7 @@ public class VideoTranscodeThread {
 	 * 
 	 * <h2>终止当前转码过程</h2>
 	 * <p>执行该方法将中断正在进行的转码，并删除原有的输出文件。</p>
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void abort() {
 		if(encoder!=null) {

@@ -20,7 +20,7 @@ import kohgylw.kiftd.server.util.ConfigureReader;
  * 
  * <h2>受保护URL禁止直接访问过滤器</h2>
  * <p>该过滤器主要用于避免访问者直接访问某些资源，这些URL仅支持转发进入而不能直接访问。</p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @WebFilter({ "/prv/*" })

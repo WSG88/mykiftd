@@ -11,7 +11,7 @@ public interface NodeMapper {
 	 * 该方法用于一次性将目标文件夹下的全部文件节点查询出来，如果超过限值，则只查询限值内的节点数量。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param pfid
 	 *            java.lang.String 目标文件夹ID
 	 * @return java.util.List 文件节点列表
@@ -25,7 +25,7 @@ public interface NodeMapper {
 	 * 该方法需要传入一个Map作为查询条件，其中需要包含pid（父文件夹的ID），offset（起始偏移），rows（查询行数）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param keyMap
 	 *            java.util.Map 封装查询条件的Map对象
 	 * @return java.util.List 查询结果
@@ -39,7 +39,7 @@ public interface NodeMapper {
 	 * 该方法主要用于配合queryByParentFolderIdSection方法实现分页加载。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param pfid
 	 *            java.lang.String 父文件夹ID
 	 * @return long 文件总数
@@ -63,7 +63,7 @@ public interface NodeMapper {
 	 * 该方法用于查询某个文件块ID所对应的所有节点副本，如果超过限值，则只查询限值内的节点数量。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path
 	 *            java.lang.String 目标文件块ID
 	 * @return java.util.List 文件节点列表
@@ -77,7 +77,7 @@ public interface NodeMapper {
 	 * 该方法用于查询某个文件块ID所对应的所有节点副本，结果中不会包括指定ID的节点，如果超过限值，则只查询限值内的节点数量。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param map
 	 *            java.util.Map 其中必须包含：path 目标文件块ID，fileId 要排除的文件节点ID
 	 * @return java.util.List 文件节点列表
@@ -91,7 +91,7 @@ public interface NodeMapper {
 	 * 该方法用于一次性将与目标文件同文件夹的文件节点查询出来，如果超过限值，则只查询限值内的节点数量。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileId
 	 *            java.lang.String 目标文件ID
 	 * @return java.util.List 文件节点列表

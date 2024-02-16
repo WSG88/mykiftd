@@ -87,7 +87,7 @@ public class FSProgressDialog extends KiftdDynamicWindow {
 	 * 该方法将显示监听窗口，并开启一个针对文件管理器的监听线程用于自动监听进度。注意：该方法将阻塞线程直到窗口关闭。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	protected void show() {
 		listen = true;
@@ -117,7 +117,7 @@ public class FSProgressDialog extends KiftdDynamicWindow {
 	 * 在窗口打开后，可以随时调用该方法停止其中的监听线程并关闭窗口。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	protected void close() {
 		listen = false;
@@ -138,7 +138,7 @@ public class FSProgressDialog extends KiftdDynamicWindow {
 	 * 通过该方法获取一个新的进度窗口，与前几个窗口不同，每次进行进度监听操作均应获取新窗口而不能使用前一个。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.ui.module.FSProgressDialog 新的窗口对象
 	 */
 	protected static FSProgressDialog getNewInstance() {

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  * 请使用（且仅使用）该方法实现输出操作。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class VariableSpeedBufferedOutputStream extends BufferedOutputStream {
@@ -34,7 +34,7 @@ public class VariableSpeedBufferedOutputStream extends BufferedOutputStream {
 	 * 请使用该方法构造一个实例，然后开始使用。必须按照参数说明给定正确的参数以确保该实例能够正常发挥作用。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param out     java.io.OutputStream 原始输出流，传入方法与普通的BufferedOutputStream构造器相同
 	 * @param maxRate long 每秒最大可输出的数据数量，以B为单位。例如：传入1024就代表该实例的最大输出限速为1KB/s
 	 * @param session javax.servlet.http.HttpSession 传入用户会话。该对象用于锁定输出操作，从而确保当用户开启多个
@@ -56,7 +56,7 @@ public class VariableSpeedBufferedOutputStream extends BufferedOutputStream {
 	 * 输出数据。使用方法与原BufferedOutputStream类中定义的方法完全相同。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param b   byte[] 数据数组
 	 * @param off int 数据的起始下标
 	 * @param len int 数据在数组中的长度

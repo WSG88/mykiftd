@@ -22,7 +22,7 @@ import kohgylw.kiftd.ui.callback.*;
  * 该启动器将以界面模式启动kiftd，请执行静态build()方法开启界面并初始化kiftd服务器引擎。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class UIRunner {
@@ -150,7 +150,7 @@ public class UIRunner {
 	 * 该方法将返回本启动器的唯一实例。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.mc.UIRunner 本启动器唯一实例
 	 * @throws Exception
 	 */

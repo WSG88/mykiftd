@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
  * 该工具类用于判断一个文本输入流最可能是哪种编码格式，详见getTxtCharset方法。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -28,7 +28,7 @@ public class TxtCharsetGetter {
 	 * 该方法用于获取一个文本输入流最可能的编码集，并将其名称返回。注意：由于该方法执行完毕后会关闭输入流，因此请传入一个新的输入流用于操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in
 	 *            java.io.InputStream 包含判断文本的输入流
 	 * @return java.lang.String 可能性最高的编码集名称
@@ -75,7 +75,7 @@ public class TxtCharsetGetter {
 	 * 该方法用于获取一个字符串byte数组最可能的编码集，并将其名称返回。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param buf
 	 *            待检验byte数组
 	 * @param offset

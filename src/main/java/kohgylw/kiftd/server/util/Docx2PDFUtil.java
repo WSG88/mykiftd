@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
  * IOC容器管理。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -30,7 +30,7 @@ public class Docx2PDFUtil {
 	 * 
 	 * <h2>执行word格式转换（docx）</h2>
 	 * <p>将输入流中的word文件转换为PDF格式并输出至指定输出流，该方法线程阻塞。</p>
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in java.io.InputStream 输入流，输入docx格式
 	 * @param out java.io.OutputStream 输出流，输出PDF格式
 	 */

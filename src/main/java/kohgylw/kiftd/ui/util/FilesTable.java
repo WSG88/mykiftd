@@ -24,7 +24,7 @@ import kohgylw.kiftd.util.file_system_manager.pojo.Folder;
  * 需要使用，请直接创建该类的实例，默认显示空表格。如需更新数据，请使用updateValues方法。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FilesTable extends JTable {
@@ -281,7 +281,7 @@ public class FilesTable extends JTable {
 	 * 该功能用于获取被双击的元素，可能是文件夹，也可能是文件。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param e awt鼠标事件。
 	 * @return Object 被双击的项目，如果是文件夹则返回Folder对象，如果是文件则返回Node对象。如果非双击操作则返回null。
 	 */

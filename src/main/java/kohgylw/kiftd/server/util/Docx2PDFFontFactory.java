@@ -8,7 +8,7 @@ import com.lowagie.text.FontFactoryImp;
  * 
  * <h2>docx格式转PDF格式字体工厂</h2>
  * <p>该工厂用于自动加载所有系统字体和程序内置字体。</p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class Docx2PDFFontFactory extends FontFactoryImp{

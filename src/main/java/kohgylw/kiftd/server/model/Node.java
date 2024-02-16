@@ -5,7 +5,7 @@ package kohgylw.kiftd.server.model;
  * <h2>文件节点模型</h2>
  * <p>该模型描述了kiftd文件管理机制中的一个文件节点，从而生成一个文件的抽象对象，所有外部操作均应基于此对象进行而不是直接操作文件块。
  * 该模型对应了文件系统数据库中的FILE表。</p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class Node {

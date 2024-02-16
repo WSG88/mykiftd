@@ -24,7 +24,7 @@ import ws.schild.jave.encode.VideoAttributes;
  * 该工具用于进行视频转码操作，使用Spring IOC容器管理。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -61,7 +61,7 @@ public class VideoTranscodeUtil {
 	 * 以百分制返回指定ID的视频转码进度，如若未开始则自动开始。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fId
 	 *            java.lang.String 转码视频的ID
 	 * @return java.lang.String 转码进度，按百分制返回，例如“1.2”代表完成1.2%，返回null则参数不正确。

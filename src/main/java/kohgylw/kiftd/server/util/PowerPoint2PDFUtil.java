@@ -41,7 +41,7 @@ import kohgylw.kiftd.server.enumeration.PowerPointType;
  * IOC容器管理。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -51,7 +51,7 @@ public class PowerPoint2PDFUtil {
 	 * 
 	 * <h2>执行PPT格式转换（ppt/pptx）</h2>
 	 * <p>将输入流中的PPT文件转换为PDF格式并输出至指定输出流，该方法线程阻塞。</p>
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in java.io.InputStream 输入流，输入ppt/pptx格式
 	 * @param out java.io.OutputStream 输出流，输出PDF格式
 	 * @param type kohgylw.kiftd.server.enumeration.PowerPointType 使用何种标准进行解析（ppt/pptx）

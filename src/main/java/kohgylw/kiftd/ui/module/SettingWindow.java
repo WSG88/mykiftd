@@ -25,7 +25,7 @@ import java.awt.event.*;
  * 设置界面类，负责图形化界面下的设置界面显示。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class SettingWindow extends KiftdDynamicWindow {

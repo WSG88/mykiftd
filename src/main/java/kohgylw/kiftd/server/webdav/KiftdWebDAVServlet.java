@@ -117,7 +117,7 @@ import kohgylw.kiftd.server.webdav.util.KiftdWebDAVResourcesUtil;
  * WebDAV Reference | Microsoft Docs</a>
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class KiftdWebDAVServlet extends HttpServlet {
@@ -213,7 +213,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * @param javax.servlet.http.HttpServletResponse resp 响应对象
 	 * @exception javax.servlet.ServletException 如果无法处理相应的请求则抛出此异常
 	 * @exception java.io.IOException            如果发生的IO问题则抛出此异常
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -279,7 +279,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * BASIC授权方式，如果客户端未正确发送此信息，应告知客户端使用此授权方式发送授权信息。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req 请求对象
 	 * @throws IllegalArgumentException 授权信息的内容有误，例如方式不为BASIC或格式不正确
 	 * @throws UnAuthorizedException    授权信息不合法（例如密码不正确）或未给出授权
@@ -356,7 +356,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 
 	 * @throws IOException 响应对象发送信息失败
 	 * @param resp 响应对象
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	private void needAuthorizationByBasic(HttpServletResponse resp) throws IOException {
 		StringBuilder value = new StringBuilder(16);
@@ -457,7 +457,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理propfind请求，提供指定路径下文件或文件夹的属性集合，并以JAXP方式将结果以XML格式返回给客户端。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象
 	 * @param resp 响应对象
 	 */
@@ -685,7 +685,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 特别地：Microsoft提供的开发文档中声明了此请求类型不应再被维护。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象
 	 * @param resp 响应对象
 	 */
@@ -843,7 +843,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理get请求，获取一个文件。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request  请求对象
 	 * @param response 响应对象
 	 */
@@ -922,7 +922,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理head请求，获取一个文件（与Get或Post类似），但不返回具体内容，只返回响应头。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request  请求对象
 	 * @param response 响应对象
 	 */
@@ -995,7 +995,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理mkcol请求，以默认规则在指定逻辑路径上创建一个新的文件夹。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -1068,7 +1068,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理put请求，将客户端上传的文件存放至指定逻辑路径。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -1095,7 +1095,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 将此方法独立出来是为了便于在操作结束后统一将请求的逻辑路径从锁定的空资源列表中移除。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象
 	 * @param resp 响应对象
 	 * @param path 请求的逻辑路径，应使用getRelativePath方法获得
@@ -1227,7 +1227,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于将输入流中的数据写为文件并存放在文件系统的临时目录中。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in       输入流，用以读取要存放的数据。
 	 * @param oldBlock 原始文件，该参数将基于range参数生成此文件的修改版，若传入null或者其不为文件，直接使用输入流生成新文件。
 	 * @param range    range对象，用于指定修改原始文件中哪些位置的数据，仅当oldBlock不为null时此参数才会生效。
@@ -1337,7 +1337,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理delete请求，删除指定逻辑路径上的文件或文件夹。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -1446,7 +1446,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理copy请求，将指定逻辑路径上的文件或文件夹拷贝到“Destination”请求头指定的逻辑路径上。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -1467,7 +1467,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理move请求，将指定逻辑路径上的文件或文件夹移动到“Destination”请求头指定的逻辑路径上。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -1492,7 +1492,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 当其值为“infinity”时，拷贝文件夹会在指定逻辑路径上生成原资源的完整副本（包括其内容）。移动模式仅允许该值为“infinity”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req    请求对象
 	 * @param resp   响应对象
 	 * @param isCopy 是否为拷贝模式，当传入true时执行拷贝，否则执行移动
@@ -1863,7 +1863,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于解析“Destination”请求头并完成必要的检查，最后返回其代表的资源路径。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req 请求对象
 	 * @return java.lang.String 由“Destination”请求头解析出的逻辑路径，如果客户端发送了此请求头且格式正确，
 	 *         则返回解析结果，否则返回null。该方法仅对请求头的格式进行检查，但不确保其对应的逻辑路径合法。
@@ -1920,7 +1920,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 这一功能同样是实现“上传”操作的必要功能之一（单独实现PUT是不够的）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -2297,7 +2297,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法用于处理unlock请求，解除指定逻辑路径上的文件或文件夹的锁定。与lock请求配合使用。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req  请求对象。
 	 * @param resp 响应对象。
 	 */
@@ -2812,7 +2812,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 因此此方法提供的允许请求类型并不一定能被具体的处理逻辑所“允许”（例如客户端可能没有操作权限）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param req 请求对象
 	 * @return java.lang.String 根据请求逻辑路径生成的符合Allow响应头规范的请求类型声明字符串，例如“OPTIONS,
 	 *         DELETE, LOCK, UNLOCK, PROPPATCH, COPY, MOVE, PROPFIND”。该方法不会返回null。
@@ -2973,7 +2973,7 @@ public class KiftdWebDAVServlet extends HttpServlet {
 	 * 该方法可用于告知客户端当前的请求类型未被允许，并向其提供允许的请求类型列表。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @throws IOException 响应对象发送信息失败
 	 * @param req  请求对象
 	 * @param resp 响应对象

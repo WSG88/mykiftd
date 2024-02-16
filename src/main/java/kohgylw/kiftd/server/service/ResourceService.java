@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  * 该服务内集成了预览资源相关的一些操作，用于前端进行各种资源的在线预览。对于需转化的格式也将在此转化为适合 预览的流并写回前端。具体内容详见各个方法。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public interface ResourceService {
@@ -22,7 +22,7 @@ public interface ResourceService {
 	 * 对于各种无需进行转化格式的资源，从文件系统中获取相应文件块并以流形式写回，支持断点续传。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fid
 	 *            java.lang.String 目标资源的fid，用于指定文件节点
 	 * @param request
@@ -39,7 +39,7 @@ public interface ResourceService {
 	 * 获取指定ID的Word文档资源，并转化为PDF流供前端预览，方式同预览PDF。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileId
 	 *            java.lang.String 要读取的文件节点ID
 	 * @param request
@@ -56,7 +56,7 @@ public interface ResourceService {
 	 * 获取指定ID的TXT文档资源，并转化为PDF流供前端预览，方式同预览PDF。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileId
 	 *            java.lang.String 要读取的文件节点ID
 	 * @param request
@@ -73,7 +73,7 @@ public interface ResourceService {
 	 * 获取指定ID的PPT文档资源，并转化为PDF流提供前端预览，方式同预览PDF。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileId
 	 *            java.lang.String 要读取的文件节点ID
 	 * @param request
@@ -90,7 +90,7 @@ public interface ResourceService {
 	 * 获得指定视频的解码状态，并根据返回信息提示界面下一步操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request
 	 *            javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String 转码状态，若为FIN则代表转码完毕可直接播放，否则为百分制的进度，例如“1.2”代表完成了1.2%。
@@ -104,7 +104,7 @@ public interface ResourceService {
 	 * 以标准UTF-8编码获取LRC歌词，该方法不支持断点续传。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fileId
 	 *            java.lang.String 要获取LRC歌词文件的节点ID
 	 * @param request
@@ -121,7 +121,7 @@ public interface ResourceService {
 	 * 该方法用于获取公告信息的md5值，如果无公告则会返回null。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.lang.String 公告信息的md5值，无公告时返回null。
 	 */
 	public String getNoticeMD5();
@@ -133,7 +133,7 @@ public interface ResourceService {
 	 * 该方法将以text/html格式返回公告信息的HTML内容，将其加入到div容器内即可直接显示了。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request
 	 *            javax.servlet.http.HttpServletRequest 请求对象
 	 * @param response

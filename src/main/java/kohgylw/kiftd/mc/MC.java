@@ -14,11 +14,11 @@ package kohgylw.kiftd.mc;
  * <ul>
  * <li>任何人均可以免费获取kiftd的源代码的原版拷贝，并进行分发或修改，并可用于任何用途。</li>
  * <li>经由该源代码或其修改版本编译而成的程序也可以运用于任何用途，无论是商业的还是非商业的。</li>
- * <li>作者青阳龙野（kohgylw@163.com）无需为使用该源代码或其编译生成的程序所导致的任何后果承担责任。</li>
- * <li>作者青阳龙野（kohgylw@163.com）保留kiftd原版源代码及其编译生成的程序的版权。</li>
+ * <li>无需为使用该源代码或其编译生成的程序所导致的任何后果承担责任。</li>
+ * <li>保留kiftd原版源代码及其编译生成的程序的版权。</li>
  * </ul>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 
@@ -30,7 +30,7 @@ public class MC {
 	 * 这里是整个kiftd应用的入口，即程序的主方法。您可以从此开始阅读kiftd的全部逻辑代码。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param args
 	 *            java.lang.String[] 接收控制台传入参数，例如“-console“
 	 */

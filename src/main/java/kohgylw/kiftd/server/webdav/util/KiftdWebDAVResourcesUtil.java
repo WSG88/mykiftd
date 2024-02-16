@@ -27,7 +27,7 @@ import kohgylw.kiftd.server.webdav.pojo.KiftdWebDAVResource;
  * 该工具使用Spring IOC容器进行管理。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -52,7 +52,7 @@ public class KiftdWebDAVResourcesUtil {
 	 * 注意，此方法在性能上相较于直接根据ID获取文件夹对象要差。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path 逻辑路径，必须以“/”起始。例如“/”、“/foo/”或“/foo/bar”均合法。
 	 * @return kohgylw.kiftd.server.model.Folder
 	 *         逻辑路径对应的文件夹对象。如果文件夹不存在或逻辑路径不合法，则返回null
@@ -92,7 +92,7 @@ public class KiftdWebDAVResourcesUtil {
 	 * 注意，此方法在性能上相较于直接根据ID获取文件节点对象要差。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path 逻辑路径，必须以“/”起始，但不能以“/”结尾。例如“/foo”或“/foo/bar”均合法。
 	 * @return kohgylw.kiftd.server.model.Node 逻辑路径对应的文件节点对象。如果文件不存在或逻辑路径不合法，则返回null
 	 */
@@ -123,7 +123,7 @@ public class KiftdWebDAVResourcesUtil {
 	 * 该方法通过逻辑路径返回一个封装好的资源对象，该资源对象是逻辑路径对应的存储在kiftd的一个虚拟文件。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path 逻辑路径，必须以“/”起始。例如“/foo”或“/foo/bar/”均合法。
 	 * @return kohgylw.kiftd.server.webdav.pojo.KiftdWebDAVResource
 	 *         资源对象，封装了kiftd虚拟文件系统中文件或文件夹。
@@ -150,7 +150,7 @@ public class KiftdWebDAVResourcesUtil {
 	 * 该方法能够获取指定逻辑路径（应对应一个文件夹）下所有允许指定账户访问的文件和文件夹名称，并以字符串数组的形式返回。 其中，文件夹的名称会以“/”结尾。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path 逻辑路径，必须以“/”起始，应当对应一个文件夹。
 	 * @return java.lang.String[] 指定逻辑路径下所有允许指定用户访问的文件和文件夹名称数组。其中文件夹名称会以“/”结尾。
 	 *         若指定逻辑路径未指向一个合法的文件夹或该文件夹不允许指定用户访问，则会返回一个长度为0的数组。
@@ -184,7 +184,7 @@ public class KiftdWebDAVResourcesUtil {
 	 * 此方法同时还会记录创建文件夹日志（如果创建成功的话）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param folderName 要创建的文件夹的名称。
 	 * @param parentFolder 要在哪个文件夹内创建此文件夹。
 	 * @param account 进行该操作的账户，可以传入null（匿名访问者）或合法的账户名称。

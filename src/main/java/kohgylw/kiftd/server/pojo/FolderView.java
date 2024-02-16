@@ -10,7 +10,7 @@ import kohgylw.kiftd.server.model.*;
  * 该POJO用于封装文件夹视图数据，方便转化为标准JSON格式并发送至前端，具体内容请见该类中的get和set方法。
  * 文件夹视图是主页上最基础的数据封装类型。
  * </p>
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FolderView {

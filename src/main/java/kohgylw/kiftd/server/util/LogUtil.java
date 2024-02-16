@@ -21,7 +21,7 @@ import java.io.*;
  * 该工具用于生成日志文件并在其中添加标准化日志。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @Component
@@ -276,7 +276,7 @@ public class LogUtil {
 	 * 写入一个下载文件日志，该操作由使用外部链接触发。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f kohgylw.kiftd.server.model.Node 下载目标
 	 */
 	public void writeDownloadFileByKeyEvent(HttpServletRequest request, Node f) {
@@ -303,7 +303,7 @@ public class LogUtil {
 	 * 当用户试图获取一个资源的下载链接时，记录此事件。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void writeShareFileURLEvent(HttpServletRequest request, Node f) {
 		if (ConfigureReader.instance().inspectLogLevel(LogLevel.Event)) {
@@ -361,7 +361,7 @@ public class LogUtil {
 	 * 记录移动/复制文件操作，谁、在什么时候、将哪个文件移动/复制到哪。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account    java.lang.String 操作者账户名
 	 * @param ip         java.lang.String 操作者IP地址
 	 * @param finalPath  java.lang.String 被操作后的节点完整路径
@@ -390,7 +390,7 @@ public class LogUtil {
 	 * 记录移动/复制文件夹操作，谁、在什么时候、将哪个文件夹移动/复制到哪。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param account    java.lang.String 操作者账户名
 	 * @param ip         java.lang.String 操作者IP地址
 	 * @param finalPath  java.lang.String 被操作后的文件夹完整路径

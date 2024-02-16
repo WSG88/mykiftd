@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * 若无法继承，也可以直接静态调用此方法。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class RangeFileStreamWriter {
@@ -30,7 +30,7 @@ public class RangeFileStreamWriter {
 	 * 处理普通的或带有断点续传参数的下载请求，并按照请求方式提供相应的输出流写出。请传入相应的参数并执行该方法以开始传输。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request      javax.servlet.http.HttpServletRequest 请求对象
 	 * @param response     javax.servlet.http.HttpServletResponse 响应对象
 	 * @param fo           java.io.File 需要写出的文件
@@ -53,7 +53,7 @@ public class RangeFileStreamWriter {
 	 * 处理普通的或带有断点续传参数的下载请求，并按照请求方式提供响应头信息，不提供具体的文件内容。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request      javax.servlet.http.HttpServletRequest 请求对象
 	 * @param response     javax.servlet.http.HttpServletResponse 响应对象
 	 * @param fo           java.io.File 需要写出的文件
@@ -75,7 +75,7 @@ public class RangeFileStreamWriter {
 	 * 该方法用于提供对文件下载请求的处理，并按照请求方式提供相应的输出流写出。当选择发送具体的文件内容时将会正常返回文件内容， 否则仅返回响应头而无响应体。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request      javax.servlet.http.HttpServletRequest 请求对象
 	 * @param response     javax.servlet.http.HttpServletResponse 响应对象
 	 * @param fo           java.io.File 需要写出的文件

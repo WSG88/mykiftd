@@ -28,7 +28,7 @@ public class FolderUtil {
 	 * 该方法将返回目标文件夹的所有父级文件夹，并以列表的形式返回。如果上级层数超过了Integer.MAX_VALUE，那么只获取最后Integer.MAX_VALUE级。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param fid java.lang.String 要获取的目标文件夹ID
 	 * @return java.util.List
 	 *         指定文件夹的所有父级文件夹列表，以kohgylw.kiftd.server.model.Folder形式封装。
@@ -60,7 +60,7 @@ public class FolderUtil {
 	 * 该方法将会尝试删除一个文件夹内的所有文件和文件夹，最后也会删除传入文件夹本身。 它是线程执行的，因此不会阻塞原线程，也不会返回任何结果。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param folderId java.lang.String 要删除的文件夹树的ID，不能为null。
 	 */
 	public void deleteAllChildFolder(final String folderId) {
@@ -159,7 +159,7 @@ public class FolderUtil {
 	 * 该方法主要是用于插入文件夹数据后，再次确认新插入的数据是否有效。这个方法应在插入过程结束后、返回结果前执行。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f kohgylw.kiftd.server.model.Folder 要检查的文件夹对象
 	 * @return boolean 是否有效，若返回false则进行了数据回滚
 	 */
@@ -186,7 +186,7 @@ public class FolderUtil {
 	 * 该方法用于在一个路径下创建一个完整的目标文件夹复制树，复制的文件夹将会使用指定的新名称，完成后返回创建结果。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param prototype       kohgylw.kiftd.server.model.Folder 要复制的目标文件夹，即复制的样板
 	 * @param parentFolder    kohgylw.kiftd.server.model.Folder
 	 *                        复制文件夹的父文件夹，指定在哪个路径下创建目标文件夹的副本
@@ -253,7 +253,7 @@ public class FolderUtil {
 	 * 该方法用于在一个路径下创建一个完整的目标文件夹复制树，复制的文件夹将会使用指定的新名称，完成后返回创建结果。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param prototype    kohgylw.kiftd.server.model.Folder 要复制的目标文件夹，即复制的样板
 	 * @param parentFolder kohgylw.kiftd.server.model.Folder
 	 *                     复制文件夹的父文件夹，指定在哪个路径下创建目标文件夹的副本
@@ -272,7 +272,7 @@ public class FolderUtil {
 	 * 该方法用于获取指定文件夹当前的完整逻辑路径，型如“/ROOT/doc”。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param f kohgylw.kiftd.server.model.Folder 要获取路径的文件夹
 	 * @return java.lang.String 指定节点的逻辑路径，包含其自身完整的文件夹路径名，各级之间以“/”分割。
 	 */
@@ -294,7 +294,7 @@ public class FolderUtil {
 	 * 父文件夹的约束等级改为1（仅小组）时，所有约束等级为0（公开的）的子文件夹的约束等级也会提升为1， 而所有约束等级为2（仅自己）的子文件夹则不会受影响。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param folderId 要修改的文件夹ID
 	 * @param c        约束等级
 	 */

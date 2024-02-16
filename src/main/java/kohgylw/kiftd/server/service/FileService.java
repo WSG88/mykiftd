@@ -26,7 +26,7 @@ public interface FileService {
 	 * 
 	 * <h2>移动文件的前置判断操作</h2>
 	 * <p>该方法用于验证将要执行的移动（或复制）操作是否合法，应在正式执行移动（或复制）操作前调用，并根据返回值判断是否继续执行。</p>
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象，应包含：
 	 * <ul>
 	 * <li>strIdList 涉及的文件ID数组，JSON格式</li>
@@ -53,7 +53,7 @@ public interface FileService {
 	 * 
 	 * <h2>执行移动文件操作</h2>
 	 * <p>该方法用于执行移动（或复制）操作，在调用该方法前应先进行前置检查。</p>
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request javax.servlet.http.HttpServletRequest 请求对象，应包含：
 	 * <ul>
 	 * <li>strIdList 涉及的文件ID数组，JSON格式</li>
@@ -80,7 +80,7 @@ public interface FileService {
 	 * 用于验证上传文件夹的合法性，包括权限、是否重名、文件是否超限等。并使用不同的返回结果告知前端应进行的下一步操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request
 	 *            javax.servlet.http.HttpServletRequest 请求对象
 	 * @return java.lang.String
@@ -103,7 +103,7 @@ public interface FileService {
 	 * 处理上传文件夹请求并生成对应的文件结构来存储上传的文件，再返回信息告知前端是否上传成功。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param request
 	 *            javax.servlet.http.HttpServletRequest 请求对象
 	 * @param file

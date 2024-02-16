@@ -52,7 +52,7 @@ import kohgylw.kiftd.util.file_system_manager.pojo.FolderView;
  * 其中除了包含页面内容外，也封装了一些文件管理必要的操作过程，与文件管理器工具直接对接。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class FSViewer extends KiftdDynamicWindow {
@@ -468,7 +468,7 @@ public class FSViewer extends KiftdDynamicWindow {
 	 * 当一个文件窗口已经打开时，再次调用此方法仅会显示唯一的文件窗口（不会再打开一个新的文件窗口）。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void show() {
 		disableAllButtons();
@@ -516,7 +516,7 @@ public class FSViewer extends KiftdDynamicWindow {
 	 * 该方法能够获得文件管理器的唯一实例，在第一次打开时会进行较耗时的资源加载工作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.ui.module.FSViewer 该视图的唯一实例，程序中只会存在一个该窗口。
 	 */
 	public static FSViewer getInstance() throws SQLException {

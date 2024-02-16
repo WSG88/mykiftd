@@ -28,7 +28,7 @@ import kohgylw.kiftd.server.util.*;
  * 该监听器用于在服务器启动和关闭时执行一些必要的初始化或清理操作。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 @WebListener

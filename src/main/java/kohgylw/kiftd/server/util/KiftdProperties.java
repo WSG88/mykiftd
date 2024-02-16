@@ -24,7 +24,7 @@ import java.util.Set;
  * 同时能够确保在写入文件时保留原始的文本结构（包括顺序及注释内容）。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class KiftdProperties {
@@ -60,7 +60,7 @@ public class KiftdProperties {
 	 * 该功能用于获取指定键对应的配置参数。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param key
 	 *            java.lang.String 键名
 	 * @return 查询到的值，若传入的键无对应值或键为null则返回null
@@ -79,7 +79,7 @@ public class KiftdProperties {
 	 * 该功能用于获取指定键对应的配置参数。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param key
 	 *            java.lang.String 键名
 	 * @param defaultValue
@@ -98,7 +98,7 @@ public class KiftdProperties {
 	 * 当传入的key已经存在时，修改该key对应的配置值，否则新增一个配置。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param key
 	 *            java.lang.String 键名
 	 * @param value
@@ -125,7 +125,7 @@ public class KiftdProperties {
 	 * 且使用“=”或“:”作为键值对的分隔符，当存在多个分隔符时，以第一个为准。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param in
 	 *            java.io.InputStream 输入流，必须为文本输入流
 	 */
@@ -164,7 +164,7 @@ public class KiftdProperties {
 	 * 将全部配置以文本流的形式写出，若写处至文件则会覆盖原有的内容。当添加标题头时，将会在文本流的开头处增加标题头文字及日期。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param out
 	 *            java.io.OutputStream 输出流，能够接收文本流
 	 * @param header
@@ -197,7 +197,7 @@ public class KiftdProperties {
 	 * 该方法用于获得目前存在的所有配置项，并以List的形式返回。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return java.util.List<java.lang.String> 所有的配置项
 	 */
 	public Set<String> stringPropertieNames() {
@@ -211,7 +211,7 @@ public class KiftdProperties {
 	 * 根据传入的键名清除一项配置，若无该键名对应的配置或键名为null则不执行任何操作。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param key
 	 *            java.lang.String 键名
 	 */
@@ -233,7 +233,7 @@ public class KiftdProperties {
 	 * 该功能用于清空所有的配置项。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 */
 	public void clear() {
 		contexts.clear();

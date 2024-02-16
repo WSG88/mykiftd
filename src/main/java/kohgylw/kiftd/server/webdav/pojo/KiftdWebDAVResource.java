@@ -29,7 +29,7 @@ import kohgylw.kiftd.server.webdav.url.HttpPathUtil;
  * 该类用于将kiftd中的文件或文件夹封装为一个抽象的“资源”以便进行统一处理，避免文件和文件夹区分处理带来的代码混乱。
  * </p>
  * 
- * @author 青阳龙野(kohgylw)
+ * @author 青
  * @version 1.0
  */
 public class KiftdWebDAVResource implements WebResource {
@@ -53,7 +53,7 @@ public class KiftdWebDAVResource implements WebResource {
 	 * 该方法将构造一个文件夹对应的资源。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path   资源路径，必须输入完整的路径名称，以“/”开头，例如“/foo”或“/foo/bar”
 	 * @param folder 文件夹对象，如果文件夹不存在则可传入null
 	 */
@@ -81,7 +81,7 @@ public class KiftdWebDAVResource implements WebResource {
 	 * 该方法将构造一个文件对应的资源。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @param path  资源路径，必须输入完整的路径名称，以“/”开头，并以“/”结尾。例如“/foo/”
 	 * @param node  文件节点对象，如果文件节点不存在则可传入null
 	 * @param block 文件块对象，如果文件节点不存在则也应传入null（但不会作为文件节点存在与否的判断条件）
@@ -302,7 +302,7 @@ public class KiftdWebDAVResource implements WebResource {
 	 * 当该资源对应的是一个文件时，返回文件节点对象。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.server.model.Node 该资源对应的文件节点对象，
 	 *         当该资源不存在或者该资源对应的是一个文件夹时，返回null
 	 */
@@ -317,7 +317,7 @@ public class KiftdWebDAVResource implements WebResource {
 	 * 当该资源对应的是一个文件夹时，返回文件夹对象。
 	 * </p>
 	 * 
-	 * @author 青阳龙野(kohgylw)
+	 * @author 青
 	 * @return kohgylw.kiftd.server.model.Folder 该资源对应的文件夹对象，
 	 *         当该资源不存在或者该资源对应的是一个文件时，返回null
 	 */
