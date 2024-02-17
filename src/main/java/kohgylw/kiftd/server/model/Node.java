@@ -16,6 +16,8 @@ public class Node {
 	private String fileParentFolder;
 	private String fileCreationDate;
 	private String fileCreator;
+	/**文件永久链接*/
+	private String fileLink;
 
 	// 不需要返回前端、仅应在后端中使用的字段
 	private transient String filePath;
@@ -74,5 +76,13 @@ public class Node {
 
 	public void setFilePath(final String filePath) {
 		this.filePath = filePath;
+	}
+
+	public String getFileLink() {
+		return fileLink;
+	}
+
+	public void setFileLink(String fileLink) {
+		this.fileLink = fileLink;
 	}
 }
