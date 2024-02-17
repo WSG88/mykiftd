@@ -1739,7 +1739,32 @@ function doupload(count) {
 			if (xhr.status === 200) {
 				// 上传成功
 				var result = xhr.responseText;
-				if (result == "uploadsuccess") {
+				if (result === "uploadsuccess" || result.indexOf("uploadsuccess") === 0) {
+					if (result.indexOf("uploadsuccess") === 0) {
+						var strId = result.replace('uploadsuccess', '');
+						if (strId.length > 0) {
+							$.ajax({
+								type: "POST",
+								dataType: "text",
+								url: "homeController/getFileChainKeyString.ajax",
+								data: {
+									fid: strId,
+									name: fname,
+									link: window.location.protocol
+										+ "//"
+										+ window.location.host
+										+ "/externalLinksController/chain/"
+										+ encodeURIComponent(fname.replace(/\\/g,
+											"_")) + "?ckey="
+								},
+								success: function (result) {
+								},
+								error: function () {
+								}
+							});
+						}
+					}
+
 					$("#uls_" + count).text("[已完成]");
 					if (count < fcount) {
 						doupload(count + 1);
@@ -3401,9 +3426,34 @@ function iteratorImport(i, newFolderName) {
 				pingInt = null;
 			}
 			if (xhr.status === 200) {
-				// TODO 上传成功
+				// 上传成功
 				var result = xhr.responseText;
-				if (result == "uploadsuccess") {
+				if (result === "uploadsuccess" || result.indexOf("uploadsuccess") === 0) {
+					if (result.indexOf("uploadsuccess") === 0) {
+						var strId = result.replace('uploadsuccess', '');
+						if (strId.length > 0) {
+							$.ajax({
+								type: "POST",
+								dataType: "text",
+								url: "homeController/getFileChainKeyString.ajax",
+								data: {
+									fid: strId,
+									name: fname,
+									link: window.location.protocol
+										+ "//"
+										+ window.location.host
+										+ "/externalLinksController/chain/"
+										+ encodeURIComponent(fname.replace(/\\/g,
+											"_")) + "?ckey="
+								},
+								success: function (result) {
+								},
+								error: function () {
+								}
+							});
+						}
+					}
+
 					$("#ils_" + i).text("[已完成]");
 					var ni = i + 1;
 					if (ni < fcount) {

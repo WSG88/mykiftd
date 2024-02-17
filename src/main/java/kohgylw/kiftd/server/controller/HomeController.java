@@ -1,13 +1,18 @@
 package kohgylw.kiftd.server.controller;
 
-import org.springframework.stereotype.*;
-import javax.annotation.*;
-
+import kohgylw.kiftd.server.mapper.NodeMapper;
+import kohgylw.kiftd.server.model.Node;
 import kohgylw.kiftd.server.service.*;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.*;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.net.URLEncoder;
 
 /**
  * 
@@ -41,6 +46,8 @@ public class HomeController {
 	private PlayAudioService pas;
 	@Resource
 	private FileChainService fcs;
+	@Resource
+	private NodeMapper fm;
 
 	@RequestMapping({ "/getServerOS.ajax" })
 	@ResponseBody
@@ -323,6 +330,26 @@ public class HomeController {
 	@ResponseBody
 	public String getFileChainKey(final HttpServletRequest request) {
 		return fcs.getChainKeyByFid(request);
+	}
+
+	/**
+	 * 获取永久资源链接
+	 */
+	@RequestMapping(value = {"/getFileChainKeyString.ajax"}, produces = {CHARSET_BY_AJAX})
+	@ResponseBody
+	public String getFileChainKeyString(final HttpServletRequest request) {
+		String fid = request.getParameter("fid");
+		String name = request.getParameter("name");
+		String link = request.getParameter("link");
+		String key = fcs.getChainKeyByFid(request);
+		String result = link + URLEncoder.encode(key);
+		//System.out.println(name + " " + fid + " " + result);
+		Node f = new Node();
+		f.setFileId(fid);
+		f.setFileName(name);
+		f.setFileLink(result);
+		fm.updateLink(f);
+		return result;
 	}
 
 	// 对指定文件夹的内容进行统计

@@ -1,27 +1,27 @@
 package kohgylw.kiftd.server.service.impl;
 
-import kohgylw.kiftd.server.service.*;
-
-import org.springframework.stereotype.*;
-import kohgylw.kiftd.server.mapper.*;
-import javax.annotation.*;
-import kohgylw.kiftd.server.enumeration.*;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import kohgylw.kiftd.server.enumeration.AccountAuth;
 import kohgylw.kiftd.server.exception.FoldersTotalOutOfLimitException;
 import kohgylw.kiftd.server.listener.ServerInitListener;
-import kohgylw.kiftd.server.model.*;
+import kohgylw.kiftd.server.mapper.FolderMapper;
+import kohgylw.kiftd.server.mapper.NodeMapper;
+import kohgylw.kiftd.server.model.Folder;
+import kohgylw.kiftd.server.model.Node;
 import kohgylw.kiftd.server.pojo.CheckImportFolderRespons;
 import kohgylw.kiftd.server.pojo.CheckUploadFilesRespons;
-
-import org.springframework.web.multipart.*;
-
-import javax.servlet.http.*;
-import java.io.*;
-
+import kohgylw.kiftd.server.service.FileService;
 import kohgylw.kiftd.server.util.*;
-import java.util.*;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
-import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * 
@@ -234,7 +234,7 @@ public class FileServiceImpl extends RangeFileStreamWriter implements FileServic
 		if (newNode != null) {
 			// 存入成功，则写入日志并返回成功提示
 			this.lu.writeUploadFileEvent(request, newNode, account);
-			return UPLOADSUCCESS;
+			return UPLOADSUCCESS + newNode.getFileId();
 		} else {
 			// 存入失败则删除残余文件块，并返回失败提示
 			block.delete();
@@ -1188,7 +1188,7 @@ public class FileServiceImpl extends RangeFileStreamWriter implements FileServic
 		if (newNode != null) {
 			// 成功，则记录日志并返回成功提示
 			this.lu.writeUploadFileEvent(request, newNode, account);
-			return UPLOADSUCCESS;
+			return UPLOADSUCCESS + newNode.getFileId();
 		} else {
 			// 失败，则清理残留文件块并返回失败提示
 			block.delete();
@@ -1238,7 +1238,7 @@ public class FileServiceImpl extends RangeFileStreamWriter implements FileServic
 	 * </p>
 	 * 
 	 * @author 青
-	 * @param java.lang.String 需要解析的相对路径
+	 * @param path java.lang.String 需要解析的相对路径
 	 * @return java.lang.String 文件名
 	 */
 	private String getFileNameFormPath(String path) {
