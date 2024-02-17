@@ -11,6 +11,7 @@
 			property="fileCreationDate" />
 		<result column="file_creator" jdbcType="VARCHAR" property="fileCreator" />
 		<result column="file_path" jdbcType="VARCHAR" property="filePath" />
+		<result column="file_link" jdbcType="VARCHAR" property="fileLink" />
 	</resultMap>
 
 	<select id="queryByParentFolderId" parameterType="java.lang.String"
@@ -34,7 +35,7 @@
 
 	<insert id="insert" parameterType="kohgylw.kiftd.server.model.Node">
 		INSERT INTO FILE
-		VALUES(#{fileId,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{fileSize,jdbcType=VARCHAR},#{fileParentFolder,jdbcType=VARCHAR},#{fileCreationDate,jdbcType=VARCHAR},#{fileCreator,jdbcType=VARCHAR},#{filePath,jdbcType=VARCHAR})
+		VALUES(#{fileId,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{fileSize,jdbcType=VARCHAR},#{fileParentFolder,jdbcType=VARCHAR},#{fileCreationDate,jdbcType=VARCHAR},#{fileCreator,jdbcType=VARCHAR},#{filePath,jdbcType=VARCHAR},#{fileLink,jdbcType=VARCHAR})
 	</insert>
 
 	<update id="update" parameterType="kohgylw.kiftd.server.model.Node">
@@ -46,6 +47,14 @@
 		#{fileCreator,jdbcType=VARCHAR},file_path =
 		#{filePath,jdbcType=VARCHAR} WHERE file_id =
 		#{fileId,jdbcType=VARCHAR}
+	</update>
+
+	<update id="updateLink" parameterType="kohgylw.kiftd.server.model.Node">
+		UPDATE FILE
+		SET file_link =
+				#{fileLink,jdbcType=VARCHAR}
+		WHERE file_id =
+			  #{fileId,jdbcType=VARCHAR}
 	</update>
 
 	<delete id="deleteById" parameterType="java.lang.String">

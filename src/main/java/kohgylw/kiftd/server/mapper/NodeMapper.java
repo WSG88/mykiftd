@@ -50,6 +50,8 @@ public interface NodeMapper {
 
 	int update(final Node f);
 
+	int updateLink(final Node f);
+
 	int deleteById(final String fileId);
 
 	Node queryById(final String fileId);

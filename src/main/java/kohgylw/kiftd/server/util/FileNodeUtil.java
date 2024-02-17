@@ -84,7 +84,7 @@ public class FileNodeUtil {
 				state1.close();
 				final Statement state2 = conn.createStatement();
 				state2.execute(
-						"CREATE TABLE IF NOT EXISTS FILE(file_id VARCHAR(128) PRIMARY KEY,file_name VARCHAR(128) NOT NULL,file_size VARCHAR(128) NOT NULL,file_parent_folder varchar(128) NOT NULL,file_creation_date varchar(128) NOT NULL,file_creator varchar(128) NOT NULL,file_path varchar(128) NOT NULL)");
+						"CREATE TABLE IF NOT EXISTS FILE(file_id VARCHAR(128) PRIMARY KEY,file_name VARCHAR(128) NOT NULL,file_size VARCHAR(128) NOT NULL,file_parent_folder varchar(128) NOT NULL,file_creation_date varchar(128) NOT NULL,file_creator varchar(128) NOT NULL,file_path varchar(128) NOT NULL,file_link varchar(255) NULL)");
 				state2.close();
 				// 为数据库生成索引，此处分为MySQL和H2两种操作
 				if (ConfigureReader.instance().useMySQL()) {
