@@ -94,7 +94,7 @@ public class FileSystemManager {
 					"SELECT * FROM FILE WHERE file_parent_folder = ? LIMIT 0," + MAX_FOLDERS_OR_FILES_LIMIT);
 			selectFoldersByParentFolderId = c.prepareStatement(
 					"SELECT * FROM FOLDER WHERE folder_parent = ? LIMIT 0," + MAX_FOLDERS_OR_FILES_LIMIT);
-			insertNode = c.prepareStatement("INSERT INTO FILE VALUES(?,?,?,?,?,?,?)");
+			insertNode = c.prepareStatement("INSERT INTO FILE VALUES(?,?,?,?,?,?,?,?)");
 			insertFolder = c.prepareStatement("INSERT INTO FOLDER VALUES(?,?,?,?,?,?)");
 			deleteNodeById = c.prepareStatement("DELETE FROM FILE WHERE file_id = ?");
 			deleteFolderById = c.prepareStatement("DELETE FROM FOLDER WHERE folder_id = ?");
@@ -372,6 +372,7 @@ public class FileSystemManager {
 		insertNode.setString(5, n.getFileCreationDate());
 		insertNode.setString(6, n.getFileCreator());
 		insertNode.setString(7, n.getFilePath());
+		insertNode.setString(8, n.getFileLink());
 		insertNode.execute();
 		return insertNode.getUpdateCount();
 	}
