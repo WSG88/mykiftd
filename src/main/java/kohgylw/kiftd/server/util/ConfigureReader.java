@@ -1501,11 +1501,12 @@ public class ConfigureReader {
 	 * @return boolean 是否写入成功。仅当账户名不存在且写入成功时返回true，否则返回false
 	 * @throws Exception 写入时发生的异常
 	 */
-	public boolean createNewAccount(String newAccount, String newPassword) throws Exception {
+	public boolean createNewAccount(String newAccount, String newPassword, String idCard) throws Exception {
 		if (newAccount != null && newPassword != null) {
 			if (accountp.getProperty(newAccount + ".pwd") == null) {
 				synchronized (accountp) {
 					accountp.setProperty(newAccount + ".pwd", newPassword);
+					accountp.setProperty(newAccount + ".idCard", idCard);
 					if (signUpAuth != null) {
 						accountp.setProperty(newAccount + ".auth", signUpAuth);
 					}

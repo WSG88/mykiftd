@@ -1,7 +1,9 @@
 package kohgylw.kiftd.server.mapper;
 
-import kohgylw.kiftd.server.model.*;
-import java.util.*;
+import kohgylw.kiftd.server.model.Node;
+
+import java.util.List;
+import java.util.Map;
 
 public interface NodeMapper {
 	/**
@@ -55,6 +57,8 @@ public interface NodeMapper {
 	int deleteById(final String fileId);
 
 	Node queryById(final String fileId);
+
+	Node queryUserId(final String fileId);
 
 	int updateFileNameById(final Map<String, String> map);
 

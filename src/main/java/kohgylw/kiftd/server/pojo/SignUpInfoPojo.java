@@ -12,6 +12,8 @@ public class SignUpInfoPojo {
 	private String account;
 	private String pwd;
 	private String time;
+	/**身份证号码*/
+	private String id;
 	public String getAccount() {
 		return account;
 	}
@@ -31,4 +33,11 @@ public class SignUpInfoPojo {
 		this.time = time;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 }

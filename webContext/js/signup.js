@@ -21,12 +21,13 @@ function getNewVerCode(){
 //执行注册过程
 function doSignUp(){
 	// 还原提示状态
-	$("#accountidbox,#accountpwdbox,#repaccountpwdbox").removeClass("has-error");
+	$("#accountidbox,#accountpwdbox,#repaccountpwdbox,#repaccountpwdbox1").removeClass("has-error");
 	$("#alertbox").removeClass("show");
 	$("#alertbox").addClass("hidden");
 	var accountId = $("#accountid").val();
 	var accountPwd = $("#accountpwd").val();
 	var repAccountPwd = $("#repaccountpwd").val();
+	var repAccountPwd1 = $("#repaccountpwd1").val();
 	// 输入非空检查
 	if (accountId.length == 0) {
 		$("#accountidbox").addClass("has-error");
@@ -38,13 +39,18 @@ function doSignUp(){
 		$("#accountpwd").focus();
 		return;
 	}
+	if (repAccountPwd1.length == 0) {
+		$("#repaccountpwdbox1").addClass("has-error");
+		$("#repaccountpwd1").focus();
+		return;
+	}
 	if (repAccountPwd.length == 0) {
 		$("#repaccountpwdbox").addClass("has-error");
 		$("#repaccountpwd").focus();
 		return;
 	}
 	// 确认密码检查
-	$("#accountid,#accountpwd,#repaccountpwd,#signupBtn,#vercode").attr('disabled', true);
+	$("#accountid,#accountpwd,#repaccountpwd,#repaccountpwd1,#signupBtn,#vercode").attr('disabled', true);
 	if (accountPwd+"" != repAccountPwd+"") {
 		showAlert("提示：两次输入的新密码不一致，请检查确认");
 		$("#accountpwdbox").addClass("has-error");
@@ -62,7 +68,7 @@ function doSignUp(){
 			var signup_publicKeyInfo=eval("("+result+")");
 			// 生成JSON对象格式的信息
 			var signUpInfo = '{account:"' + accountId + '",pwd:"'
-			+ accountPwd + '",time:"' + signup_publicKeyInfo.time + '"}';
+				+ accountPwd + '",id:"' + repAccountPwd1 + '",time:"' + signup_publicKeyInfo.time + '"}';
 			var encrypt = new JSEncrypt();// 加密插件对象
 			encrypt.setPublicKey(signup_publicKeyInfo.publicKey);// 设置公钥
 			var encrypted = encrypt.encrypt(signUpInfo);// 进行加密
@@ -87,7 +93,7 @@ function sendSignUpInfo(encrypted){
 		success : function(result) {
 			switch (result) {
 			case "success":
-				$("#accountidbox,#accountpwdbox,#repaccountpwdbox").removeClass("has-error");
+				$("#accountidbox,#accountpwdbox,#repaccountpwdbox,#repaccountpwdbox1").removeClass("has-error");
 				window.location.href = "/home.html";
 				break;
 			case "illegal":
@@ -98,7 +104,7 @@ function sendSignUpInfo(encrypted){
 				$("#accountidbox").addClass("has-error");
 				break;
 			case "needvercode":
-				$("#accountid,#accountpwd,#repaccountpwd,#signupBtn,#vercode").attr('disabled', false);
+				$("#accountid,#accountpwd,#repaccountpwd,#repaccountpwd1,#signupBtn,#vercode").attr('disabled', false);
 				$("#vercodebox").removeClass("hidden");
 				$("#vercodebox").addClass("show");
 				getNewVerCode();
@@ -138,7 +144,7 @@ function sendSignUpInfo(encrypted){
 
 // 显示修改密码错误提示
 function showAlert(txt) {
-	$("#accountid,#accountpwd,#repaccountpwd,#signupBtn,#vercode").attr('disabled', false);
+	$("#accountid,#accountpwd,#repaccountpwd,#repaccountpwd1,#signupBtn,#vercode").attr('disabled', false);
 	$("#alertbox").removeClass("hidden");
 	$("#alertbox").addClass("show");
 	$("#alertbox").text(txt);

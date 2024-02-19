@@ -13,6 +13,9 @@
 		<result column="file_path" jdbcType="VARCHAR" property="filePath" />
 		<result column="file_link" jdbcType="VARCHAR" property="fileLink" />
 	</resultMap>
+	<resultMap id="BaseResultMap1" type="kohgylw.kiftd.server.model.Node">
+		<result column="ID" jdbcType="VARCHAR" property="fileId" />
+	</resultMap>
 
 	<select id="queryByParentFolderId" parameterType="java.lang.String"
 		resultMap="BaseResultMap">
@@ -66,6 +69,12 @@
 		resultMap="BaseResultMap">
 		SELECT * FROM FILE WHERE file_id =
 		#{fileId,jdbcType=VARCHAR}
+	</select>
+
+	<select id="queryUserId" parameterType="java.lang.String"
+			resultMap="BaseResultMap1">
+		SELECT ID FROM oa_hr_user WHERE ID_CARD =
+								 #{fileId,jdbcType=VARCHAR}
 	</select>
 
 	<update id="updateFileNameById" parameterType="java.util.Map">

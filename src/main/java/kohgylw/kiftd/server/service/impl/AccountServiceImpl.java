@@ -1,22 +1,27 @@
 package kohgylw.kiftd.server.service.impl;
 
-import kohgylw.kiftd.server.service.*;
-import org.springframework.stereotype.*;
-
 import com.google.gson.Gson;
+import kohgylw.kiftd.server.enumeration.VCLevel;
+import kohgylw.kiftd.server.mapper.NodeMapper;
+import kohgylw.kiftd.server.model.Node;
+import kohgylw.kiftd.server.pojo.ChangePasswordInfoPojo;
+import kohgylw.kiftd.server.pojo.LoginInfoPojo;
+import kohgylw.kiftd.server.pojo.PublicKeyInfo;
+import kohgylw.kiftd.server.pojo.SignUpInfoPojo;
+import kohgylw.kiftd.server.service.AccountService;
+import kohgylw.kiftd.server.util.*;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.annotation.Resource;
-import javax.servlet.http.*;
-import kohgylw.kiftd.server.util.*;
-import kohgylw.kiftd.server.enumeration.VCLevel;
-import kohgylw.kiftd.server.pojo.*;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -227,6 +232,8 @@ public class AccountServiceImpl implements AccountService {
 		return ConfigureReader.instance().isAllowSignUp() ? "true" : "false";
 	}
 
+	@Resource
+	private NodeMapper fim;
 	@Override
 	public String doSignUp(HttpServletRequest request) {
 		// 验证是否开启了注册功能
@@ -261,13 +268,20 @@ public class AccountServiceImpl implements AccountService {
 			}
 			String account = info.getAccount();
 			String password = info.getPwd();
+			/**姓名、身份证号码合法性检查*/
+			String idCard = info.getId();
+			Node f = fim.queryUserId(idCard);
+			if (f == null) {
+				return "illegalid";
+			}
+
 			// 新账户和密码的合法性检查
 			if (account != null && account.length() >= 3 && account.length() <= 32
 					&& ios8859_1Encoder.canEncode(account)) {
 				if (account.indexOf("=") < 0 && account.indexOf(":") < 0 && account.indexOf("#") != 0) {
 					if (password != null && password.length() >= 3 && password.length() <= 32
 							&& ios8859_1Encoder.canEncode(password)) {
-						if (ConfigureReader.instance().createNewAccount(account, password)) {
+						if (ConfigureReader.instance().createNewAccount(account, password, idCard)) {
 							lu.writeSignUpEvent(request, account, password);
 							session.setAttribute("ACCOUNT", account);
 							return "success";
