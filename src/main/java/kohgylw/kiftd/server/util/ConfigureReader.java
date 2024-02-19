@@ -56,7 +56,7 @@ public class ConfigureReader {
 	private final String ACCOUNT_PROPERTIES_FILE = "account.properties";
 	private final String SERVER_PROPERTIES_FILE = "server.properties";
 	private final int DEFAULT_BUFFER_SIZE = 1048576;
-	private final int DEFAULT_PORT = 8880;
+	private final int DEFAULT_PORT = 9998;
 	private final String DEFAULT_LOG_LEVEL = "E";
 	private final String DEFAULT_VC_LEVEL = "STANDARD";
 	private final String DEFAULT_MUST_LOGIN = "O";
@@ -589,8 +589,8 @@ public class ConfigureReader {
 		}
 		final String ports = this.serverp.getProperty("port");
 		if (ports == null) {
-			Printer.instance.print("警告：未找到端口配置，将采用默认值（8880）。");
-			this.port = 8880;
+			Printer.instance.print("警告：未找到端口配置，将采用默认值（9998）。");
+			this.port = 9998;
 		} else {
 			try {
 				this.port = Integer.parseInt(ports);
